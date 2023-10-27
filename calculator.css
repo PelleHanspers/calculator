@@ -1,0 +1,23 @@
+#main {
+    display: flex;
+}
+
+#input1 {
+    height: 1.2rem;
+    width: 8rem;
+    margin-right: 1rem;
+}
+
+#input2 {
+    height: 1.2rem;
+    width: 8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#output {
+    height: 1.2rem;
+    width: 8rem;
+    border: 3px solid black;
+    text-indent: 0.3rem;
+}
