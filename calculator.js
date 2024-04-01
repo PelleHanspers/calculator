@@ -44,6 +44,12 @@ input1.addEventListener("input", function() {
   operation();
 })
 
+input1.addEventListener("focus", function() {
+  if (input1.value === "0") {
+      input1.value = "";
+  }
+});
+
 input2.addEventListener("input", function() {
   let x = document.getElementById("input2").value;
   input2.value = x;
@@ -51,34 +57,37 @@ input2.addEventListener("input", function() {
   operation();
 })
 
+input2.addEventListener("focus", function() {
+  if (input2.value === "0") {
+      input2.value = "";
+  }
+});
+
 operationList.addEventListener("click", function(){
   operation();
 })
 
-let valueOne = parseFloat(document.getElementById("input1").value);
-let valueTwo = parseFloat(document.getElementById("input2").value);
-
 function add(a, b) {
     let sum = (parseFloat(input1.value) + parseFloat(input2.value));
-    output.innerText = "= " + parseFloat((sum).toFixed(10));
+    output.innerText = "= " + parseFloat((sum).toFixed(10).slice(0, 13));
     console.log(sum);
 }
 
 function subtract(a, b) {
   let sum = (parseFloat(input1.value) - parseFloat(input2.value));
-  output.innerText = "= " + parseFloat((sum).toFixed(10));
+  output.innerText = "= " + parseFloat((sum).toFixed(10).slice(0, 13));
   console.log(sum);
 }
 
 function mulitply(a, b) {
   let sum = (parseFloat(input1.value) * parseFloat(input2.value));
-  output.innerText = "= " + parseFloat((sum).toFixed(10));
+  output.innerText = "= " + parseFloat((sum).toFixed(10).slice(0, 13));
   console.log(sum);
 }
 
 function divide(a, b) {
   let sum = (parseFloat(input1.value) / parseFloat(input2.value));
-  output.innerText = "= " + parseFloat((sum).toFixed(10));
+  output.innerText = "= " + parseFloat((sum).toFixed(10).slice(0, 13));
   console.log(sum);
 }
 
